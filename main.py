@@ -444,8 +444,8 @@ async def approve(update: Update, context: ContextTypes.DEFAULT_TYPE):
     dump()
 
 token = open('token.txt', 'r').readline()
-if '/n' in token:
-    token = token[:-2]
+if '\n' in token:
+    token = token[:-1]
 if __name__ == '__main__':
     application = Application.builder().token(token).build()
 
